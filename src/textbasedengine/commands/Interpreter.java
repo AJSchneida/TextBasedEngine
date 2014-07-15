@@ -16,8 +16,11 @@ public class Interpreter {
 						if (!Player.currentLocation.checkPhrase(place))
 							Main.output.append(String.format(input[1] + ": I can't go there!%n"));
 					}
+					break;
 				default:
 					Main.output.append(String.format("I don't recognize the command '%s'.", input[0]));
+					break;
+				
 			}
 		else
 			if (input[0].equals("start") && input[1].equals("over")) {
