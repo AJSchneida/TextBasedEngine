@@ -20,6 +20,14 @@
 	    </Description>
 	    <Connections>
 	        <Connection id="0" phrase="down" />
+	        <Connection id="3" phrase="portal" open="0" />
 	    </Connections>
+	    <Items>
+	        <Item id="0" />
+	        <Item id="1" />
+	    </Items>
+	</Location>
+	<Location id="3">
+	    <Description>As you walk through the portal, you realize you've made a terrible mistake and entered the cow dimension!</Description>
 	</Location>
 </Locations>
