@@ -20,7 +20,7 @@ public class Player {
 		dead = false;
 		Main.output.setText("");
 		moveTo(Location.start());
-		playerStats = new Stats("mainCharacter", 100, 100);
+		playerStats = new Stats("mainCharacter", 100, 100, 100, 100);
 	}
 	
 	/**
