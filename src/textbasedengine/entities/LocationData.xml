@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Locations>
+	<Location id="0">
+	    <Description>
+	        You stand in a small room. A ladder leads up towards light, while a corridor extends east into darkness.
+	    </Description>
+	    <Connections>
+	        <Connection id="1" phrase="east" />
+	        <Connection id="2" phrase="up" />
+	    </Connections>
+	</Location>
+	<Location id="1">
+	    <Description>You step into the corridor and immediately plummet into an abyssal pit.</Description>
+	    <Connections></Connections>
+	    <OnEnter>Death</OnEnter>
+	</Location>
+	<Location id="2">
+	    <Description>
+	        As you climb the ladder the fresh spring breeze blows around you. Stepping off the last rung you find yourself surrounded by a beautiful meadow. The ladder remains beneath you, leading back underground.
+	    </Description>
+	    <Connections>
+	        <Connection id="0" phrase="down" />
+	        <Connection id="3" phrase="portal" open="0" />
+	    </Connections>
+	    <Items>
+	        <Item id="0" />
+	        <Item id="1" />
+	    </Items>
+	</Location>
+	<Location id="3">
+	    <Description>As you walk through the portal, you realize you've made a terrible mistake and entered the cow dimension!</Description>
+	</Location>
+</Locations>
