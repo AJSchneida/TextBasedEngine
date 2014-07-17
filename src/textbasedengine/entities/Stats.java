@@ -11,13 +11,17 @@ import textbasedengine.Main;
 public class Stats {
 
 	public static String playerName;
-	public static int healthPoints;
+	public static int currentHealth;
 	public static int maxHealth;
+	private static int currentMana;
+	private static int maxMana;
 	
-	public Stats(String playerName, int healthPoints, int maxHealth){
+	public Stats(String playerName, int currentHealth, int maxHealth, int currentMana, int maxMana){
 		Stats.playerName = playerName;
-		Stats.healthPoints = healthPoints;
+		Stats.currentHealth = currentHealth;
 		Stats.maxHealth = maxHealth;
+		Stats.currentMana = currentMana;
+		Stats.maxMana = maxMana;
 	}
 	
 	public static String getPlayerName(){
@@ -28,8 +32,8 @@ public class Stats {
 		playerName = newName;
 	}
 	
-	public static int getHealthPoints(){
-		return healthPoints;
+	public static int getCurrentHealth(){
+		return currentHealth;
 	}
 	
 	/**
@@ -37,14 +41,24 @@ public class Stats {
 	 */
 	
 	public static void setHealth(int newHealth){
-		healthPoints = newHealth;
-		if(newHealth > healthPoints){
-			healthPoints = maxHealth;
+		if(newHealth > currentHealth){
+			currentHealth = maxHealth;
 		}
-		if(healthPoints <= 0){
+		currentHealth = newHealth;
+		if(currentHealth <= 0){
 			Player.dead = true;
 			Main.output.append(String.format("You are dead. Type \"start over\" to restart.%n"));
 		}
 	}
 	
+	public static int getCurrentMana(){
+		return currentMana;
+	}
+	
+	public static void setCurrentMana(int newMana){
+		if(newMana > currentMana){
+			currentMana = maxMana;
+		}
+			currentMana = newMana;
+	}
 }
