@@ -67,8 +67,6 @@ public class Player {
 	public static void dropItem(String phrase) {
 		
 	}
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> 6c837219a46b755a467a96860cf10331545d066d
+
