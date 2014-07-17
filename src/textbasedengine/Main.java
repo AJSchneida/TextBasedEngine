@@ -20,9 +20,15 @@ import textbasedengine.entities.Location;
 import textbasedengine.entities.Player;
 import textbasedengine.gui.WindowHandler;
 
-
-
+/**
+ * The starting point of the program. Contains reference to the main output window
+ * @author Austin
+ * @version Temporary
+ */
 public class Main {
+	/**
+	 * The main output window
+	 */
 	public static JTextArea output;
 	static JTextField input;
 	static JScrollPane sp;
