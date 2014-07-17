@@ -3,7 +3,7 @@ package textbasedengine.entities;
 import textbasedengine.Main;
 
 /**
- * Class that defines all the states for the player.
+ * Class that encapsulates all stats for the player.
  * @author AJ
  * @version 0.0.1
  */
@@ -51,6 +51,10 @@ public class Stats {
 		}
 	}
 	
+	public static void setMaxHealth(int newMaxHealth){
+		maxHealth = newMaxHealth;
+	}
+	
 	public static int getCurrentMana(){
 		return currentMana;
 	}
@@ -60,5 +64,13 @@ public class Stats {
 			currentMana = maxMana;
 		}
 			currentMana = newMana;
+	}
+	
+	public static void setMaxMana(int newMaxMana){
+		maxMana = newMaxMana;
+	}
+	
+	public static void printStats(){
+		Main.output.append(String.format("Your current stats are " + getCurrentHealth() + " HP and " + getCurrentMana() + " Mana.%n"));
 	}
 }
